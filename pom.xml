@@ -35,12 +35,12 @@
   <distributionManagement>
     <repository>
         <id>releases</id>
-        <name>ip-172-31-80-240-releases</name>
+        <name>mdt-releases</name>
         <url>https://artifactory.maxdogtechnologies.tools/artifactory/repo-mvn</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>ip-172-31-80-240-snapshots</name>
+        <name>mdt-snapshots</name>
         <url>https://artifactory.maxdogtechnologies.tools/artifactory/repo-mvn</url>
     </snapshotRepository>
 </distributionManagement>
