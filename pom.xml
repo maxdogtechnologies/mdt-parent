@@ -59,4 +59,10 @@
             </extension>
         </extensions>
   </build>
+  <scm>
+  	<url>https://github.com/maxdogtechnologies/mdt-parent.git</url>
+  	<connection>scm:git:git@github.com:maxdogtechnologies/mdt-parent.git</connection>
+  	<developerConnection>scm:git:git@github.com:maxdogtechnologies/mdt-parent.git</developerConnection>
+  	<tag>HEAD</tag>
+  </scm>
 </project>
