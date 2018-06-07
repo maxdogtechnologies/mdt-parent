@@ -39,7 +39,7 @@
       <snapshots>
             <enabled>false</enabled>
         </snapshots>
-        <url>https://artifactory.maxdogtechnologies.tools/artifactory/libs-release</url>
+        <url>s3://repository.maxdogtechnologies.com/libs-release</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
@@ -47,7 +47,7 @@
       <releases>
             <enabled>false</enabled>
         </releases>
-        <url>https://artifactory.maxdogtechnologies.tools/artifactory/libs-snapshot</url>
+        <url>s3://repository.maxdogtechnologies.com/libs-snapshot</url>
     </snapshotRepository>
 </distributionManagement>
 </project>
