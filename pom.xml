@@ -34,14 +34,20 @@
 
   <distributionManagement>
     <repository>
-        <id>releases</id>
+        <id>central</id>
         <name>mdt-releases</name>
-        <url>https://artifactory.maxdogtechnologies.tools/artifactory/repo-mvn</url>
+      <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+        <url>https://artifactory.maxdogtechnologies.tools/artifactory/libs-release</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
         <name>mdt-snapshots</name>
-        <url>https://artifactory.maxdogtechnologies.tools/artifactory/repo-mvn</url>
+      <releases>
+            <enabled>false</enabled>
+        </releases>
+        <url>https://artifactory.maxdogtechnologies.tools/artifactory/libs-snapshot</url>
     </snapshotRepository>
 </distributionManagement>
 </project>
