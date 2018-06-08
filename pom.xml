@@ -49,15 +49,28 @@
         <url>s3://repository.maxdogtechnologies.com/libs-snapshot</url>
     </snapshotRepository>
 </distributionManagement>
-  <build>
-  <extensions>
-            <extension>
-                <groupId>org.springframework.build</groupId>
-                <artifactId>aws-maven</artifactId>
-                <version>5.0.0.RELEASE</version>
-            </extension>
-        </extensions>
-  </build>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>external.atlassian.jgitflow</groupId>
+            <artifactId>jgitflow-maven-plugin</artifactId>
+            <version>1.0-m5.1</version>
+            <configuration>
+                <flowInitContext>
+         <masterBranchName>master</masterBranchName>
+         <developBranchName>develop</developBranchName>
+         <featureBranchPrefix>feature-</featureBranchPrefix>
+         <releaseBranchPrefix>release-</releaseBranchPrefix>
+         <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+         <versionTagPrefix>v-</versionTagPrefix>
+       </flowInitContext>
+       <pushFeatures>true</pushFeatures>
+       <pushReleases>true</pushReleases>
+       <pushHotfixes>true</pushHotfixes>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
   <scm>
   	<url>https://github.com/maxdogtechnologies/mdt-parent.git</url>
   	<connection>scm:git:git@github.com:maxdogtechnologies/mdt-parent.git</connection>
