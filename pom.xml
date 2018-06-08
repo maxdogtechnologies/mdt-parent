@@ -18,7 +18,7 @@
 
   <groupId>com.mdt</groupId>
   <artifactId>mdt-parent</artifactId>
-  <version>1.3-SNAPSHOT</version>
+  <version>1.3</version>
   <packaging>pom</packaging>
 
   <name>Max Dog Technologies Parent POM</name>
