@@ -18,7 +18,8 @@
 
   <groupId>com.mdt</groupId>
   <artifactId>mdt-parent</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
+
   <packaging>pom</packaging>
 
   <name>Max Dog Technologies Parent POM</name>
@@ -49,17 +50,35 @@
         <url>s3://repository.maxdogtechnologies.com/libs-snapshot</url>
     </snapshotRepository>
 </distributionManagement>
-  <build>
+    <build>
     <plugins>
         <plugin>
             <groupId>external.atlassian.jgitflow</groupId>
             <artifactId>jgitflow-maven-plugin</artifactId>
             <version>1.0-m5.1</version>
             <configuration>
-                <!-- see goals wiki page for configuration options -->
+                <flowInitContext>
+         <masterBranchName>master</masterBranchName>
+         <developBranchName>develop</developBranchName>
+         <featureBranchPrefix>feature-</featureBranchPrefix>
+         <releaseBranchPrefix>release-</releaseBranchPrefix>
+         <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+         <versionTagPrefix>v-</versionTagPrefix>
+       </flowInitContext>
+       <pushFeatures>true</pushFeatures>
+       <pushReleases>true</pushReleases>
+       <pushHotfixes>true</pushHotfixes>
+       <allowUntracked>true</allowUntracked>
             </configuration>
         </plugin>
     </plugins>
+    <extensions>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>5.0.0.RELEASE</version>
+            </extension>
+</extensions>
 </build>
   <scm>
   	<url>https://github.com/maxdogtechnologies/mdt-parent.git</url>
